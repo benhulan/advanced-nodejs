@@ -16,5 +16,12 @@
 
 // const fs = require('fs');  // *although the resolve step returns immediately for core modules
 
-const printStars = require('./printStars');
-printStars(10, 'Hi!');
+// const printStars = require('./printStars');
+// printStars(10, 'Hi!');
+
+// Node caches files when required multiple times
+require('./ascii-art')(); // invoke function if using module.exports
+// console.log(require.cache);
+// delete require.cache['/Users/[REPLACE_WITH_LOCAL_PATH_TO_FILE]/ascii-art.js']; // this can be used to demonstrate removing a file from the cache
+
+require('./ascii-art')();
