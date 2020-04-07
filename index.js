@@ -11,8 +11,10 @@
      '/node_modules' ] }
 */
 
-console.log('In ./index.js');
-require('find-me'); // search in all the paths above, plus $HOME/.node_modules, $HOME/.node_libraries, $PREFIX/lib/node
+// console.log('In ./index.js');
+// require('find-me'); // search in all the paths above, plus $HOME/.node_modules, $HOME/.node_libraries, $PREFIX/lib/node
 
 // const fs = require('fs');  // *although the resolve step returns immediately for core modules
 
+const printStars = require('./printStars');
+printStars(10, 'Hi!');
