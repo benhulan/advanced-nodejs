@@ -2,14 +2,17 @@
 
 #### Notes:
 
-These are sandbox NodeJS files and tests. Initializing as git repo to track changes in index.js
+These are sandbox NodeJS files and tests.
 
-`node repl.js` -- launch a repl with custom settings
-`node process.js` -- show how process is an event emitter
-`node buffer.js` -- show difference between string and buffer
-`node printStars.js 5 hello` -- run a simple function
-`node index.js` -- demonstrate module caching with ascii-art
-
+`node repl.js` -- launches a repl with custom settings
+`node process.js` -- shows how process is an event emitter
+`node buffer.js` -- shows difference between string and buffer
+`node printStars.js 5 hello` -- runs a simple function
+`node index.js` -- demonstrates module caching with ascii-art
+`node callStack.js` 
+  -- Example 1 intentionally throws an error to view the event loop's FILO behavior
+  -- Example 2 demonstrates how the Event Loop takes a callback from the queue and adds it to the call stack
+`node nextTick.js` -- demonstrates how to use process.nextTick to keep function calls asynchronous
 
 #### npm commands
 
