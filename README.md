@@ -20,6 +20,7 @@ These are sandbox NodeJS files and tests.
 `node errors.js` -- explore handling errors with event emitter
 `node client.js` -- handy task manager for NodeJS with event emitter
 `node net.js` -- starts a chat server using sockets. run `nc localhost 8000` (or telnet) in another tab to test
+`node dns.js` -- demonstrates Node's DNS module
 
 #### npm commands
 `npm ls -g --depth=0 --json` -- a nice way to show global npm modules
