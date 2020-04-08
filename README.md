@@ -1,7 +1,7 @@
 ### Advanced NodeJS - Samer Buna
 
-#### Notes:
-These are sandbox NodeJS files and tests.
+#### Files:
+ - The following commands can be run in Linux/Mac Terminal to trigger various NodeJS tests
 
 `node repl.js` -- launches a repl with custom settings
 `node process.js` -- shows how process is an event emitter
@@ -19,8 +19,9 @@ These are sandbox NodeJS files and tests.
 `node asyncEvents.js` -- nice asynchronous execution timer function
 `node errors.js` -- explore handling errors with event emitter
 `node client.js` -- handy task manager for NodeJS with event emitter
-`node net.js` -- starts a chat server using sockets. run `nc localhost 8000` (or telnet) in another tab to test
+`node net.js` -- starts a chat server using TCP sockets. run `nc localhost 8000` (or telnet) in another terminal session to test
 `node dns.js` -- demonstrates Node's DNS module
+`node udp.js` -- example of working with UDP sockets using the dgram module
 
 #### npm commands
 `npm ls -g --depth=0 --json` -- a nice way to show global npm modules
