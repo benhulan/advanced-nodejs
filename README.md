@@ -22,7 +22,7 @@
 `node net.js` -- starts a chat server using TCP sockets. run `nc localhost 8000` (or telnet) in another terminal session to test
 `node dns.js` -- demonstrates Node's DNS module
 `node udp.js` -- example of working with UDP sockets using the dgram module
-`node http.js` -- has basic http server 'hello world'
+`node http.js` -- demonstrates basic HTTP server and timeout to close connection. run `curl -i localhost:8000` in another terminal to test
 
 #### npm commands
 `npm ls -g --depth=0 --json` -- a nice way to show global npm modules
