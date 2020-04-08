@@ -19,6 +19,7 @@ These are sandbox NodeJS files and tests.
 `node asyncEvents.js` -- nice asynchronous execution timer function
 `node errors.js` -- explore handling errors with event emitter
 `node client.js` -- handy task manager for NodeJS with event emitter
+`node net.js` -- starts a server. run `nc localhost 8000` (or telnet) in another tab to test
 
 #### npm commands
 `npm ls -g --depth=0 --json` -- a nice way to show global npm modules
