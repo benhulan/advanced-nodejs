@@ -41,6 +41,20 @@
  - `npm repo lodash` -- will open the repository
  - `npm prune` -- will clear out packages installed without the `--save` flag
 
+#### Useful Node repl commands
+ - `node -p "process.versions"` -- print the output of `process.versions` (replace w/ any node command) without running the repl
+ - `node -p "process.env" | less` -- prints a copy of user's environment
+ - `node -p "process.release.lts"` -- prints the lts name of the current Node
+ - `.break` -- Sometimes you get stuck, this gets you out
+ - `.clear` -- Alias for `.break`
+ - `.editor` -- Enter editor mode
+ - `.exit` -- Exit the repl
+ - `.help` -- Print this help message
+ - `.load` -- Load JS from a file into the REPL session
+ - `.save` -- Save all evaluated commands in this REPL session to a file
+ - `http.STATUS_CODES` -- returns list of all HTTP status codes with simple descriptor
+ - `url.parse('https://www.google.com/search?q=cat+gifs')` -- breaks down the url into parsed chunks
+
 #### Notes:
  - Some file names have been changed from the original for camelCase consistency
  - References to the host instructional platform have been removed
