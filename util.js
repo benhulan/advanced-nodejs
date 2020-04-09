@@ -7,4 +7,3 @@ global.answer = 42;
 global.config = {
 	port: process.env.PORT || 8080
 };
-

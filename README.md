@@ -42,9 +42,7 @@
  - `npm prune` -- will clear out packages installed without the `--save` flag
 
 #### Useful Node repl commands
- - `node -p "process.versions"` -- print the output of `process.versions` (replace w/ any node command) without running the repl
- - `node -p "process.env" | less` -- prints a copy of user's environment
- - `node -p "process.release.lts"` -- prints the lts name of the current Node
+ - `[tab][tab]` -- display global API objects
  - `.break` -- Sometimes you get stuck, this gets you out
  - `.clear` -- Alias for `.break`
  - `.editor` -- Enter editor mode
@@ -52,8 +50,10 @@
  - `.help` -- Print this help message
  - `.load` -- Load JS from a file into the REPL session
  - `.save` -- Save all evaluated commands in this REPL session to a file
+ - `node -p "process.versions"` -- print the output of `process.versions` (replace w/ any node command) without running the repl
+ - `"process.env" | less` -- prints a copy of user's environment
+ - `"process.release.lts"` -- prints the lts name of the current Node
  - `http.STATUS_CODES` -- returns list of all HTTP status codes with simple descriptor
- - `url.parse('https://www.google.com/search?q=cat+gifs')` -- breaks down the url into parsed chunks
 
 #### Notes:
  - Some file names have been changed from the original for camelCase consistency
@@ -61,3 +61,4 @@
  - `node_modules` is intentionally included in the git repo to understand the mock `find-me` package
  - `node stringDecoder.js` does not work on newer versions of NodeJS
  - `https.js` includes instructions to generate SSL certifcate for signing. key.pem and cert.pem are gitignored by this repo
+ - `url.js` contains a list of commands that must be run within a node repl, or in the terminal with the `node -p "[COMMAND]"` syntax
