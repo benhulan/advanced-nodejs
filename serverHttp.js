@@ -1,12 +1,26 @@
-// server: http.Server
 const server = require('http').createServer();
+const fs = require('fs');
+const data = { 'keyName': 'value for keyName' };
 
 server.on('request', (req, res) => {
-	// req: http.IncomingMessage
-
-	// res: http.ServerResponse
-	res.writeHead(200, { 'content-type': 'text/plain' });
-	res.end('Hello world\n');
+	switch (req.url) {
+		case '/api':
+			res.writeHead(200, { 'Content-Type': 'application/json' })
+			res.end(JSON.stringify(data));
+		  break;
+		case '/home':
+		case '/about':
+			res.writeHead(200, { 'Content-Type': 'text/html' })
+			res.end(fs.readFileSync(`./www/${req.url}.html`));
+			break;
+		case '/':
+		  res.writeHead(301, { 'Location': '/home' });
+		  res.end();
+		  break;
+		default:
+			res.writeHead(404);
+			res.end();
+	}
 });
 
 server.listen(8000);

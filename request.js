@@ -15,3 +15,5 @@ req.on('error', (err) => console.log(err));
 console.log(req.agent); // http.Agent
 
 // req.end(); // needed with .request, but not .get
+
+console.log(http.STATUS_CODES); // useful way to view all HTTP status codes in repl

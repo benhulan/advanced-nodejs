@@ -24,7 +24,7 @@
  - `node http.js` -- demonstrates basic HTTP server and timeout to close connection. run `curl -i localhost:8000` in another terminal to test
  - `sudo node https.js` -- similar to basic HTTP example. follow inline instructions to generate .pem file. use system password when prompted
  - `node request.js` -- requests HTML from google.com
- - `node serverHttp.js` -- basic Hello World server in prep for routing module
+ - `node serverHttp.js` -- demonstrates http routing. run `curl localhost:8000/home`, `~/about`, `~/api`, `~/abc` in another terminal to test
 
 #### npm commands
  - `npm ls -g --depth=0 --json` -- a nice way to show global npm modules
