@@ -30,6 +30,7 @@
  - `node fs2.js` -- iterates through `files2/` directory and removes files more than 7 days old
  - `node fs3.js` -- watches `files/` directory. test from another terminal with the following:
   - `touch files/test.txt.`, `echo 'hello' >> files/test.txt`, `rm files/test.txt`
+ - `node console.js` -- Creates custom logger. test with `tail -f *.log`
 
 #### npm commands
  - `npm ls -g --depth=0 --json` -- a nice way to show global npm modules

@@ -1,2 +1,5 @@
 key.pem
 cert.pem
+files/test*
+out.log
+err.log
