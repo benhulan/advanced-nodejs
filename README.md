@@ -25,9 +25,11 @@
  - `sudo node https.js` -- similar to basic HTTP example. follow inline instructions to generate .pem file. use system password when prompted
  - `node request.js` -- requests HTML from google.com
  - `node serverHttp.js` -- demonstrates http routing. run `curl localhost:8000/home`, `~/about`, `~/api`, `~/abc` in another terminal to test
- - `node fs1.js` -- iterates through `files/` dir and rewrites files without duplicate code
+ - `node fs1.js` -- iterates through `files/` directory and rewrites files without duplicate code
  - `node seed.js` -- creates `file2/` directory with mock files of various ages
- - `node fs2.js` -- iterates through `files2/` dir and removes files more than 7 days old
+ - `node fs2.js` -- iterates through `files2/` directory and removes files more than 7 days old
+ - `node fs3.js` -- watches `files/` directory. test from another terminal with the following:
+  - `touch files/test.txt.`, `echo 'hello' >> files/test.txt`, `rm files/test.txt`
 
 #### npm commands
  - `npm ls -g --depth=0 --json` -- a nice way to show global npm modules
