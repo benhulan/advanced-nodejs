@@ -25,6 +25,7 @@
  - `sudo node https.js` -- similar to basic HTTP example. follow inline instructions to generate .pem file. use system password when prompted
  - `node request.js` -- requests HTML from google.com
  - `node serverHttp.js` -- demonstrates http routing. run `curl localhost:8000/home`, `~/about`, `~/api`, `~/abc` in another terminal to test
+ - `node fs1.js` -- iterates through `files/` dir and rewrites files without duplicate code
 
 #### npm commands
  - `npm ls -g --depth=0 --json` -- a nice way to show global npm modules
@@ -61,4 +62,6 @@
  - `node_modules` is intentionally included in the git repo to understand the mock `find-me` package
  - `node stringDecoder.js` does not work on newer versions of NodeJS
  - `https.js` includes instructions to generate SSL certifcate for signing. key.pem and cert.pem are gitignored by this repo
- - `url.js` contains a list of commands that must be run within a node repl, or in the terminal with the `node -p "[COMMAND]"` syntax
+ - The following files contain lists of commands to be run within a node repl, or with the `node -p "[COMMAND]"` syntax
+  - `url.js`
+  - `os.js`
