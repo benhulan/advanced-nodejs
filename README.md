@@ -26,6 +26,8 @@
  - `node request.js` -- requests HTML from google.com
  - `node serverHttp.js` -- demonstrates http routing. run `curl localhost:8000/home`, `~/about`, `~/api`, `~/abc` in another terminal to test
  - `node fs1.js` -- iterates through `files/` dir and rewrites files without duplicate code
+ - `node seed.js` -- creates `file2/` directory with mock files of various ages
+ - `node fs2.js` -- iterates through `files2/` dir and removes files more than 7 days old
 
 #### npm commands
  - `npm ls -g --depth=0 --json` -- a nice way to show global npm modules
