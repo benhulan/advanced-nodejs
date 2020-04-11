@@ -30,7 +30,10 @@
  - `node fs2.js` -- iterates through `files2/` directory and removes files more than 7 days old
  - `node fs3.js` -- watches `files/` directory. test from another terminal with the following:
   - `touch files/test.txt.`, `echo 'hello' >> files/test.txt`, `rm files/test.txt`
- - `node console.js` -- Creates custom logger. test with `tail -f *.log`
+ - `node console.js` -- Creates custom logger. test with `tail -f *.log`. Check inline comments for more tests
+ - `NODE_DEBUG=web node debuglog.js` -- Conditionally add logger info based on process.env.NODE_DEBUG. run `curl -i localhost:8000` to test
+ - `node debug debug.js` -- See inline comments for a description of debug commands
+ - `node --inspect --debug-brk debug.js` -- prints URL to launch Chrome Dev-tools with an immediate debugger breakpoint
 
 #### npm commands
  - `npm ls -g --depth=0 --json` -- a nice way to show global npm modules
@@ -70,3 +73,4 @@
  - The following files contain lists of commands to be run within a node repl, or with the `node -p "[COMMAND]"` syntax
   - `url.js`
   - `os.js`
+ - `inherits.js` does not really do anything useful but demonstrates the deprecated `util.inherits` method which you may encounter
