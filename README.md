@@ -36,6 +36,8 @@
  - `node --inspect --debug-brk debug.js` -- prints URL to launch Chrome Dev-tools with an immediate debugger breakpoint
  - `node createBigFile.js` -- creates `bigfile.txt` of about 426MB (1M lines of code)
  - `node serveBigFile.js` -- serves `bigfile.txt`
+ - `node writeable.js` -- Basic writable demo. The stream echoes back whatever is typed into the console.
+ - `node readable.js` -- Basic readable demo, inefficient
 
 #### npm commands
  - `npm ls -g --depth=0 --json` -- a nice way to show global npm modules
@@ -77,4 +79,3 @@
   - `os.js`
  - `inherits.js` does not really do anything useful but demonstrates the deprecated `util.inherits` method which you may encounter
  - `bigfile.txt` has been gitignored by this repo and must be generated with `node createBigFile.js` before attempting `serveBigFile` tests
- 
