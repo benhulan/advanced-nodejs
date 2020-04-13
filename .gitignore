@@ -3,4 +3,4 @@ cert.pem
 files/test*
 out.log
 err.log
-bigfile.txt
+bigfile.*

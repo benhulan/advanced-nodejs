@@ -39,6 +39,11 @@
  - `node writeable.js` -- Basic writable demo. The stream echoes back whatever is typed into the console.
  - `node readable.js` -- Display a list of characters by passing them into a readable stream one at a time
  - `node readable.js | head -c3` -- Display first three characters and then exit the stream
+ - `node duplex.js` -- Combines basic readable and writeable examples, grouping two independent features into an instance of a Duplex object
+ - `node transform.js` -- More interesting than the duplex, the output of a transform is computed from its input
+ - `node zip.js bigfile.txt` -- More practical example of transform. We can test with `gunzip bigfile.txt.gz`
+ - `node zipCrypt.js bigfile.txt` -- Create encrypted zip file
+ - `node unzipCrypt.js bigfile.txt.zz` -- Decrypt zip file
 
 #### npm commands
  - `npm ls -g --depth=0 --json` -- a nice way to show global npm modules
