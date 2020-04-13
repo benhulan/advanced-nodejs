@@ -34,6 +34,8 @@
  - `NODE_DEBUG=web node debuglog.js` -- Conditionally add logger info based on process.env.NODE_DEBUG. run `curl -i localhost:8000` to test
  - `node debug debug.js` -- See inline comments for a description of debug commands
  - `node --inspect --debug-brk debug.js` -- prints URL to launch Chrome Dev-tools with an immediate debugger breakpoint
+ - `node createBigFile.js` -- creates `bigfile.txt` of about 426MB (1M lines of code)
+ - `node serveBigFile.js` -- serves `bigfile.txt`
 
 #### npm commands
  - `npm ls -g --depth=0 --json` -- a nice way to show global npm modules
@@ -74,3 +76,5 @@
   - `url.js`
   - `os.js`
  - `inherits.js` does not really do anything useful but demonstrates the deprecated `util.inherits` method which you may encounter
+ - `bigfile.txt` has been gitignored by this repo and must be generated with `node createBigFile.js` before attempting `serveBigFile` tests
+ 
