@@ -37,7 +37,8 @@
  - `node createBigFile.js` -- creates `bigfile.txt` of about 426MB (1M lines of code)
  - `node serveBigFile.js` -- serves `bigfile.txt`
  - `node writeable.js` -- Basic writable demo. The stream echoes back whatever is typed into the console.
- - `node readable.js` -- Basic readable demo, inefficient
+ - `node readable.js` -- Display a list of characters by passing them into a readable stream one at a time
+ - `node readable.js | head -c3` -- Display first three characters and then exit the stream
 
 #### npm commands
  - `npm ls -g --depth=0 --json` -- a nice way to show global npm modules
