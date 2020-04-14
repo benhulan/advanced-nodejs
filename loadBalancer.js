@@ -11,3 +11,8 @@ http.createServer((req, res) => {
 process.on('message', msg => {
 	console.log(`Message from master: ${msg}`);
 });
+
+// simulate a random server crash
+setTimeout(() => {
+	process.exit(1)
+}, Math.random() * 10000);

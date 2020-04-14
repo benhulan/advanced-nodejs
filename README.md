@@ -69,7 +69,7 @@ The following examples can be run in Linux/Mac Terminal to trigger various NodeJ
  - `node parent.js` - The forked `child.js` will send a message every second and the `parent.js` will print it
  - `node serverFork.js` - Test with `curl localhost:3000/compute` in one tab and `curl localhost:3000` in another
  - `node loadBalancer.js` - Test in browser or with Apache Bench tool to simulate multiple requests `ab -c200 -t10 http://localhost:8080/`
- - `node cluster.js` - Creates a cluster using `loadBalancer.js`. Perform tests as before
+ - `node cluster.js` - Creates a cluster using `loadBalancer.js`. Added mock random crash and re-forking. Perform tests as before
  - `node cluster2.js` - Displays 25 users for first 10 sec via all workers with 1 db request, then 625 users on the 2nd request, etc
 
 ### etc
@@ -115,4 +115,4 @@ Most of the following single-line commands, tips and can be run without using a 
   - `os.js`
  - `inherits.js` does not really do anything useful but demonstrates the deprecated `util.inherits` method which you may encounter
  - `bigfile.txt` has been gitignored by this repo and must be generated with `node createBigFile.js` before attempting `serveBigFile` tests
- - `cluster.js` did not significantly increase performance over the `loadBalancer.js` file, perhaps because of improvements in more recent versions of NodeJS than what was used in the original demo video
+ - `cluster.js` did not significantly increase performance over the `loadBalancer.js` file, perhaps because of improvements in more recent versions of NodeJS than what was used in the original demo video. Similarly, although crash recovery works via Node, Apache bench tests fail
