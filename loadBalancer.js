@@ -12,7 +12,7 @@ process.on('message', msg => {
 	console.log(`Message from master: ${msg}`);
 });
 
-// simulate a random server crash
-setTimeout(() => {
-	process.exit(1)
-}, Math.random() * 10000);
+// simulate a random server crash. Uncomment to test
+// setTimeout(() => {
+// 	process.exit(1)
+// }, Math.random() * 10000);
