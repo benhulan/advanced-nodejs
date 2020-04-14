@@ -8,6 +8,11 @@ if (cluster.isMaster) {
 	for (i=0; i<cpus; i++) {
 		cluster.fork();
 	}
+	// Output Worker node object for each CPU:
+	// console.dir(cluster.workers, { depth: 0 });
+	Object.values(cluster.workers).forEach(worker => {
+		worker.send(`Hello Worker ${worker.id}`)
+	});
 } else {
 	require('./loadBalancer.js');
 }
