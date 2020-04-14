@@ -9,7 +9,7 @@ if (cluster.isMaster) {
 		cluster.fork();
 	}
 	// Output Worker node object for each CPU:
-	// console.dir(cluster.workers, { depth: 0 });
+	// console.dir(cluster.workers, { depth: 2 });
 	Object.values(cluster.workers).forEach(worker => {
 		worker.send(`Hello Worker ${worker.id}`)
 	});
