@@ -5,4 +5,5 @@ let r = repl.start({
 	replMode: repl.REPL_MODE_STRICT
 });
 
-// r.context.lodash = require('lodash');
+// r.context.lodash = require('lodash'); // this does not work
+console.log(r.context.process.versions);

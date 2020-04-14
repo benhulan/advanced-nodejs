@@ -9,4 +9,6 @@ process.stdin.on('readable', () => {
 		console.log('With .toString():', buffer.toString());
 		console.log('With StringDecoder:', decoder.write(buffer));
 	}
+
+	process.stdin.resume();
 });

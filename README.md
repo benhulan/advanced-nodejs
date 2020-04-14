@@ -7,6 +7,7 @@ The following examples can be run in Linux/Mac Terminal to trigger various NodeJ
  - `node process.js` -- shows how process is an event emitter
  - `node buffer.js` -- shows difference between string and buffer
  - `node bufferSlice.js` -- interesting example using buffer.slice and conversionMap
+ - `node stringDecoder.js` -- Test with `0xE2`, `0x82`, `0xAC`. Will return Euro symbol after 3rd input
  - `node printStars.js 5 hello` -- runs a simple function
  - `node index.js` -- demonstrates module caching with ascii-art
 
@@ -93,15 +94,26 @@ Most of the following single-line commands, tips and can be run without using a 
  - `npm repo lodash` -- will open the repository
  - `npm prune` -- will clear out packages installed without the `--save` flag
 
-#### Useful Node repl commands
+#### Useful Node repl and one-line terminal commands
+ - `node --v8-options | grep "harmony"` -- List `--harmony_` features in the current version of Node's V8 engine
+  - "gc" for garbage collection, etc. 
+  - `--trace_gc` prints line number
+  - `node --expose_gc -e "gc()"` can help measure memory usage, but use sparingly 
+ - `node -p "v8.getHeapStatistics()"` - prints heap statistics
  - `[tab][tab]` -- display global API objects
- - `.break` -- Sometimes you get stuck, this gets you out
- - `.clear` -- Alias for `.break`
- - `.editor` -- Enter editor mode
- - `.exit` -- Exit the repl
- - `.help` -- Print this help message
- - `.load` -- Load JS from a file into the REPL session
- - `.save` -- Save all evaluated commands in this REPL session to a file
+ - `_` -- used to capture the last output value from a process. Test in repl with `Math.random()`, then `let r = _`
+ - `.help` output:
+  - `.break` -- Sometimes you get stuck, this gets you out
+  - `.clear` -- Alias for `.break`
+  - `.editor` -- Enter editor mode // ctrl+d to exit
+  - `.exit` -- Exit the repl
+  - `.help` -- Print this help message
+  - `.load` -- Load JS from a file into the REPL session
+  - `.save` -- Save all evaluated commands in this REPL session to a file
+ - `node --help | less` -- view options for `node` command
+  - `node -c [filename]` -- Runs a syntax check
+  - `node -r [filename]` -- Require a file for your process
+  - `node -p "process.argv.slice(1)" test 42` -- trailing arguments can be passed into a command
  - `node -p "process.versions"` -- print the output of `process.versions` (replace w/ any node command) without running the repl
  - `"process.env" | less` -- prints a copy of user's environment
  - `"process.release.lts"` -- prints the lts name of the current Node
@@ -111,11 +123,10 @@ Most of the following single-line commands, tips and can be run without using a 
  - Some file names have been changed from the original for camelCase consistency
  - References to the host instructional platform have been removed
  - `node_modules` is intentionally included in the git repo to understand the mock `find-me` package
- - `node stringDecoder.js` does not work on newer versions of NodeJS
  - `https.js` includes instructions to generate SSL certifcate for signing. key.pem and cert.pem are gitignored by this repo
  - The following files contain lists of commands to be run within a node repl, or with the `node -p "[COMMAND]"` syntax
   - `url.js`
   - `os.js`
  - `inherits.js` does not really do anything useful but demonstrates the deprecated `util.inherits` method which you may encounter
  - `bigfile.txt` has been gitignored by this repo and must be generated with `node createBigFile.js` before attempting `serveBigFile` tests
- - `cluster.js` did not significantly increase performance over the `loadBalancer.js` file, perhaps because of improvements in more recent versions of NodeJS than what was used in the original demo video
+ - `cluster.js` did not significantly increase performance over the `loadBalancer.js` file
