@@ -65,6 +65,9 @@ The following examples can be run in Linux/Mac Terminal to trigger various NodeJ
  - `node exec.js` - Implementation of the file counting utility using exec
   - Better if data returned from the command is not big, because data will be buffered
  - `node spawnInherit.js` - Data is streamed and we can make the child process inherit the stdio objects of its parents
+ - `node detach.js` - Unref() will detach and ignore the parent stdio descriptors. Test with `ps -ef | grep timer` -- `timer.js` runs despite the parent process having exited.
+ - `node parent.js` - The forked `child.js` will send a message every second and the `parent.js` will print it
+ - `node serverFork.js` - Test with `curl localhost:3000/compute` in one tab and `curl localhost:3000` in another
 
 ### etc
 Most of the following single-line commands, tips and can be run without using a coded file.
